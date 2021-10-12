@@ -13,6 +13,8 @@ class Car {
 
   brand: string;
 
+  available: boolean;
+
   category_id: string;
 
   created_at: Date;
