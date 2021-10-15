@@ -8,11 +8,6 @@ import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
 const authenticateRoutes = Router();
 const authenticateController = new AuthenticateController();
 
-authenticateRoutes.post(
-  "/sessions",
-  ensureAuthenticated,
-  ensureAdmin,
-  authenticateController.handle
-);
+authenticateRoutes.post("/sessions", authenticateController.handle);
 
 export { authenticateRoutes };
